@@ -1,6 +1,6 @@
 package com.example.woof
 
-import android.os.Bundle
+import  android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -183,7 +183,7 @@ fun DogIcon(
         modifier = modifier
             .size(dimensionResource(R.dimen.image_size))
             .padding(dimensionResource(R.dimen.padding_small))
-            .clip(MaterialTheme.shapes.small),
+            .clip(MaterialTheme.shapes.medium),
         contentScale = ContentScale.Crop,
         painter = painterResource(dogIcon),
         contentDescription = null
