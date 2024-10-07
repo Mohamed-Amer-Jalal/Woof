@@ -69,8 +69,8 @@ fun WoofApp(modifier: Modifier = Modifier) {
         topBar = {
             WoofTopAppBar()
         }
-    ) { it ->
-        LazyColumn(contentPadding = it) {
+    ) { innerPadding ->
+        LazyColumn(contentPadding = innerPadding) {
             items(dogs) {
                 DogItem(
                     dog = it,
