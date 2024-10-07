@@ -110,7 +110,7 @@ fun DogItem(
                     .fillMaxWidth()
                     .padding(dimensionResource(R.dimen.padding_small))
             ) {
-                DogIcon(dog.imageResourceId)
+                DogIcon(dog.imageResourceId, dog.name)
                 DogInformation(dog.name, dog.age)
                 Spacer(Modifier.weight(1f))
                 DogItemButton(
@@ -161,7 +161,7 @@ fun WoofTopAppBar(modifier: Modifier = Modifier) {
                         .size(dimensionResource(R.dimen.image_size))
                         .padding(dimensionResource(R.dimen.padding_small)),
                     painter = painterResource(R.drawable.ic_woof_logo),
-                    contentDescription = null
+                    contentDescription = stringResource(R.string.app_name)
                 )
                 Text(
                     text = stringResource(R.string.app_name),
@@ -176,6 +176,7 @@ fun WoofTopAppBar(modifier: Modifier = Modifier) {
 @Composable
 fun DogIcon(
     @DrawableRes dogIcon: Int,
+    @StringRes dogName: Int,
     modifier: Modifier = Modifier
 ) {
     Image(
@@ -185,7 +186,7 @@ fun DogIcon(
             .clip(MaterialTheme.shapes.medium),
         contentScale = ContentScale.Crop,
         painter = painterResource(dogIcon),
-        contentDescription = null
+        contentDescription = stringResource(dogName)
     )
 }
 
