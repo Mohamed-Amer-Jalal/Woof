@@ -104,7 +104,8 @@ fun DogItem(
                         dampingRatio = Spring.DampingRatioNoBouncy,
                         stiffness = Spring.StiffnessMedium
                     )
-                ).background(color = color)
+                )
+                .background(color = color)
         ) {
             Row(
                 modifier = Modifier
