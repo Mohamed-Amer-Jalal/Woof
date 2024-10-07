@@ -85,7 +85,7 @@ fun WoofApp(modifier: Modifier = Modifier) {
 fun DogItem(
     dog: Dog,
     modifier: Modifier = Modifier,
-    viewModel: MyViewModel = MyViewModel()
+    viewModel: WoofViewModel = WoofViewModel()
 ) {
     var expanded = viewModel.expanded.value
     val color by animateColorAsState(
