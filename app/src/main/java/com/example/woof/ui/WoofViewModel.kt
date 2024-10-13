@@ -16,7 +16,7 @@ class WoofViewModel : ViewModel() {
     fun toggleExpanded(dog: Dog) {
         _expandedStates.value = _expandedStates.value.map { dogUiState ->
             if (dogUiState.dog == dog) dogUiState.copy(isExpanded = !dogUiState.isExpanded)
-             else dogUiState
+            else dogUiState
         }
     }
 }
